@@ -31,7 +31,7 @@ Route::post('logout/user', [UserController::class, 'logout']);
 Route::controller(ResetPasswordController::class)->prefix('password')->group(function () {
     Route::post('/otp/send', "sendOtp")->name('password.otp.send');
     Route::post('/otp/check', "checkOtp")->name('password.otp.check');
-    Route::put('/reset', "updatePassword")->name('password.update');
+    Route::put('/reset', "updatePassword");
 });
 
 // Admins routes

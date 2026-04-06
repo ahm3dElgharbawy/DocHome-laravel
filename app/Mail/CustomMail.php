@@ -19,7 +19,6 @@ class CustomMail extends Mailable
     public function __construct(string  $view,private $data)
     {
         $this->view = $view;
-
     }
 
     /**

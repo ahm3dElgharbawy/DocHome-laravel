@@ -41,16 +41,17 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
-             \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
-            \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
+            \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+            \Illuminate\Routing\Middleware\ThrottleRequests::class . ':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            // \Fruitcake\Cors\HandleCors::class,
             // في مصفوفة $routeMiddleware
 
 
         ],
-//        'admin' => [
-//            \App\Http\Middleware\AdminAuthMiddleware::class,
-//        ],
+        //        'admin' => [
+        //            \App\Http\Middleware\AdminAuthMiddleware::class,
+        //        ],
     ];
 
     /**
